@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 function useSlider() {
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState<Object[]>([]);
 
   function renderImages() {
     const imageList = images.map((element, i) => (
-      <img className="h-full w-full object-cover" src={element.sourceUrl} />
+      <img className="h-full w-full object-cover bg-fixed" src={element.sourceUrl} />
     ));
     return imageList;
   }
